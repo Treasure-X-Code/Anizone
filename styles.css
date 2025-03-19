@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body, html {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    overflow: hidden;
+    font-family: monospace;
+}
+ul{
+    height: 55vh;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul li{
+    font-size: 10em;
+    font-weight: 1500;
+    letter-spacing: 5px;
+    color: #484848;
+    animation: light 1.4s linear infinite
+}
+@keyframes light{
+    0%{
+        color: #484848;
+        text-shadow: none;
+    }
+    25%{
+        color: #484848;
+        text-shadow: none;
+    }
+    50%{
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000, 0 0 50px #ff0000;
+    }
+    100%{
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900, 0 0 50px #fff900;
+    }
+}
+ul li:nth-child(1){
+    animation-delay: 0;
+}
+ul li:nth-child(2){
+    animation-delay: 0.1s;
+}
+ul li:nth-child(3){
+    animation-delay: 0.2s;
+}
+ul li:nth-child(4){
+    animation-delay: 0.3s;
+}
+ul li:nth-child(5){
+    animation-delay: 0.4s;
+}
+ul li:nth-child(6){
+    animation-delay: 0.5s;
+}
+ul li:nth-child(7){
+    animation-delay: 0.6s;
+}
+ul li:nth-child(8){
+    animation-delay: 0.7s;
+}
+.element{
+    color: rgb(255, 251, 0);
+    margin-left: 3em;
+    font-family: monospace;
+    padding: 0 3em;
+    
+}
+footer{
+    margin-top: 15em;
+    justify-content: space-between;
+}
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    z-index: 1;
+    animation: twinkle 2s infinite alternate;
+}
+  
+.shooting-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+  
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: shooting 1.5s linear infinite;
+}
+  
+@keyframes twinkle {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+  
+@keyframes shooting {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-800px) translateX(500px);
+      opacity: 0;
+    }
+}
+  
+  /* Create random shooting stars */
+@keyframes generate-shooting-star {
+    0% {
+      top: 0;
+      left: 100%;
+      opacity: 0;
+    }
+    10% {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      left: 0;
+      opacity: 0;
+    }
+}
+  
+.shooting-stars::before {
+    content: '';
+    position: absolute;
+    animation: generate-shooting-star 1.2s infinite;
+}
+/* Menu Section Background with Electric Lines */
+.menu-section {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(45deg, #ff0000, #00ccff, #9b00ff, #ffcc00);
+    background-size: 1000% 1000%;
+    animation: electricEffect 6s linear infinite;
+    color: rgb(255, 255, 255);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 2;
+    border-left: 0.2px groove white;
+}
+
+@keyframes electricEffect {
+    0% {
+        background-position: 100% 100%;
+    }
+    50% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.menu-section {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 2;
+    border-left: 0.2px groove white;
+}
+
+.menu-section input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border-right: none;
+    border-radius: 5px;
+}
+.menu-icon {
+    font-size: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+}
+
+.menu-section {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 2;
+    border-left: 0.2px groove white;
+
+border-right: none;
+    border-radius: 5px;
+}
+
+.content {
+    padding: 20px;
+    transition: margin-right 0.3s ease;
+}
+
+.open-menu {
+    right: 0 !important;
+}
+
+.content-shift {
+    margin-right: 50%;
+}
+
+.menu-icon.hidden {
+    display: none; /* Hide the menu icon when the menu is open */
+}

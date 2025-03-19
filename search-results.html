@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body class="search-results-page">
+    <!-- Main content -->
+    <div id="content">
+        <h1>Search Results</h1>
+
+        <!-- Search container -->
+        <div id="search-container">
+            <input type="text" id="new-search-box" placeholder="Search items..." />
+        </div>
+
+        <!-- Results display -->
+        <div id="results">
+            <!-- Placeholder content, will be populated dynamically -->
+        </div>
+
+        <!-- No results found message -->
+        <div id="no-results-message" class="no-results" style="display: none;">
+            <p>No results found for your search. Please try again.</p>
+            <a href="index.html" class="no-results-button">Back to Homepage</a>
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>
